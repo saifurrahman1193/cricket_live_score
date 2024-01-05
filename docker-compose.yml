@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  cricket_live_score:
+    container_name: cricket-live-score-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    ports:
+      - 91:9000
